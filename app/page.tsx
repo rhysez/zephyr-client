@@ -26,7 +26,7 @@ export default function Page() {
         <section className="md:w-2/5 w-4/5 flex flex-col justify-center m-auto h-screen gap-6 ">
           <h1 className="m-0 p-0 font-black text-4xl text-dark_3 dark:text-light_1">
             Welcome to <span className="text-zephyr_blue">Zephyr.</span> <br />
-            Let's hang out and chat.
+            Let&apos;s hang out and chat.
           </h1>
           <Signup />
         </section>
