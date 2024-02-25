@@ -1,14 +1,7 @@
 "use client";
 
-import {
-  ChatBubbleLeftEllipsisIcon,
-  SunIcon,
-  MoonIcon,
-} from "@heroicons/react/16/solid";
 import Signup from "./components/auth/Signup";
-import Login from "./components/auth/Login";
 
-import { useState } from "react";
 import { useTheme } from "next-themes";
 
 export default function Page() {

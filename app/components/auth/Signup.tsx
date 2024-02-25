@@ -1,17 +1,14 @@
 "use client";
 import Link from "next/link";
-
 import {
   ChatBubbleLeftEllipsisIcon,
   SunIcon,
   MoonIcon,
 } from "@heroicons/react/16/solid";
-import Login from "./Login";
 
 import { useState } from "react";
-import { useTheme } from "next-themes";
 
-export default function Signup(props: any) {;
+export default function Signup(props: any) {
 
   return (
     <section className="dark:bg-dark_4 bg-light_1">
@@ -20,12 +17,12 @@ export default function Signup(props: any) {;
         {props.theme == "dark" ? (
           <MoonIcon
             onClick={props.toggleTheme}
-            className="h-10 w-10 dark:text-light_1 text-dark_3 inline m-4 mb-0 cursor-pointer"
+            className={`h-10 w-10 dark:text-light_1 text-dark_3 inline m-4 mb-0 cursor-pointer animate-jump`}
           />
         ) : (
           <SunIcon
             onClick={props.toggleTheme}
-            className="h-10 w-10 dark:text-light_1 text-dark_3 inline m-4 mb-0 cursor-pointer"
+            className={`h-10 w-10 dark:text-light_1 text-dark_3 inline m-4 mb-0 cursor-pointer animate-jump`}
           />
         )}
       </div>
