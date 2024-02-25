@@ -1,8 +1,41 @@
 "use client";
+import Link from "next/link";
 
-export default function Signup() {
+import {
+  ChatBubbleLeftEllipsisIcon,
+  SunIcon,
+  MoonIcon,
+} from "@heroicons/react/16/solid";
+import Login from "./Login";
+
+import { useState } from "react";
+import { useTheme } from "next-themes";
+
+export default function Signup(props: any) {;
+
   return (
-    <form action="" className="font-semibold ">
+    <section className="dark:bg-dark_4 bg-light_1">
+    <section className="md:w-2/5 w-4/5 flex flex-col justify-center m-auto h-screen gap-6 ">
+      <div className="p-0 m-0 text-end">
+        {props.theme == "dark" ? (
+          <MoonIcon
+            onClick={props.toggleTheme}
+            className="h-10 w-10 dark:text-light_1 text-dark_3 inline m-4 mb-0 cursor-pointer"
+          />
+        ) : (
+          <SunIcon
+            onClick={props.toggleTheme}
+            className="h-10 w-10 dark:text-light_1 text-dark_3 inline m-4 mb-0 cursor-pointer"
+          />
+        )}
+      </div>
+      <h1 className="m-0 p-0 font-black text-4xl text-dark_3 dark:text-light_1">
+        Welcome to <span className="text-zephyr_blue">Zephyr</span>
+        <ChatBubbleLeftEllipsisIcon className="h-10 w-10 inline mx-2" />{" "}
+        <br />
+        Let&apos;s hang out and chat.
+      </h1>
+      <form action="" className="font-semibold ">
       <div>
         <label htmlFor="first_name" className="text-dark_3 dark:text-light_1">First name</label>
         <input
@@ -44,9 +77,11 @@ export default function Signup() {
           className="rounded-lg block w-full bg-light_2 dark:bg-dark_1 p-2.5 text-dark_3 dark:text-light_1 dark:placeholder-gray-400 "
         />
 
-        <button className="btn border-0 block mt-4 bg-zephyr_blue text-slate-50" type="submit">Join Zephyr</button>
-        <button className="btn border-0 mt-4 bg-zephyr_pink text-slate-50">Already joined? Log in</button>
+        <Link href='/dashboard'><button className="btn border-0 block mt-4 bg-zephyr_blue text-slate-50" type="submit">Join Zephyr</button></Link>
+        <Link href='/login'><button className="btn border-0 mt-4 bg-zephyr_pink text-slate-50">Already joined? Log in</button></Link>
       </div>
     </form>
+    </section>
+  </section>
   );
 }
